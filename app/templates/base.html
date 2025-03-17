@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }} - Flask-Website</title>
+        {% else %}
+        <title>Welcome to Flask-Website</title>
+        {% endif %}
+    </head>
+    <body>
+        <div>Flask-Website <a href="/index">Home</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
