@@ -1,15 +1,27 @@
-<!doctype html>
 <html>
     <head>
         {% if title %}
-        <title>{{ title }} - Flask-Website</title>
+        <title>{{ title }} - flask-website</title>
         {% else %}
-        <title>Welcome to Flask-Website</title>
+        <title>flask-website</title>
         {% endif %}
     </head>
     <body>
-        <div>Flask-Website <a href="/index">Home</a></div>
+        <div>
+            Flask-website:
+            <a href="/index">Home</a>
+            <a href="/login">Login</a>
+        </div>
         <hr>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
         {% block content %}{% endblock %}
     </body>
 </html>
