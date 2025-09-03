@@ -19,6 +19,10 @@ def index():
         {
             'author': {'username': 'Jeff'},
             'body': 'My name Jeff',
+        },
+        {
+            'author': {'username': 'Sponge Bob'},
+            'body': 'I love Krabby Patties!'
         }
     ]
     contact = {
